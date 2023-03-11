@@ -1,0 +1,745 @@
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+}
+
+.header {
+    width: 100%;
+    height: 100vh;
+    background: url(./Assets/HomeBackground.gif);
+    background-size: cover;
+    background-position: center;
+    font-family: 'montserrat';
+}
+
+.navigation {
+    width: 100%;
+    height: 5%;
+    display: flex;
+    justify-content: space-around;
+    position: fixed;
+    background-color: transparent;
+    transition: background-color 0.5s ease;
+}
+
+.navigation-list {
+    display: flex;
+    justify-content: space-between;
+}
+
+.navigation-isi {
+    padding: 1.5em;
+    font-size: 1vw;
+}
+
+.nav-link {
+    color: white;
+}
+
+.navigation-isi:hover .nav-link {
+    color: rgb(14, 54, 61);
+}
+
+.navigation-scrolled {
+    width: 100%;
+    height: 4em;
+    background-color: #000131;
+    z-index: 10;
+}
+
+.navigation-scrolled .nav-link {
+    color: white;
+}
+
+.navigation-scrolled .navigation-isi:hover .nav-link {
+    color: #c06c84;
+}
+
+.main-interface {
+    height: 90%;
+    width: 100%;
+    text-align: center;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.main-interface h1 {
+    opacity:0;
+    background: linear-gradient(to right, #f8b195, #f67280, #c06c84);
+    font-weight: 800;
+    font-size: 3vw;
+    width: fit-content;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    overflow: hidden;
+    animation: shring-animation 2.5s steps(40,end) 1s forwards, blink .5s step-end infinite alternate;
+}
+
+@keyframes shring-animation {
+    0% {
+        background-position: 0 0;
+        opacity: 0;
+        width: 0;
+    }
+    1% {
+        background-position: 0 0;
+        opacity: 1;
+        border-right: 0.1vw solid;
+    }
+    50% {
+        background-position: 150px 0;
+        opacity: 1;
+        border-right: 0.1vw solid;
+    }
+    100% {
+        background-position: 100% 0;
+        opacity: 1;
+        border-right: 0.3vw solid;
+    }
+}
+
+@keyframes blink {
+    50% {
+        border-color: transparent;
+    }
+}
+
+.container {
+    width: 100%;
+    height: auto;
+    min-height: 80vh;
+    background-color: #EBF5F9;
+}
+
+.contents {
+    font-family: 'Poppins';
+    display: inline-block;
+    position: relative;
+    width: 49%;
+    vertical-align: -2vw;
+}
+
+.Hi {
+    display: flex;
+    flex-direction: row;
+    font-size: 2.5vw;
+}
+
+.FirstPart {
+    color: #CB8383;
+}
+
+.SecondPart {
+    color: #000131;
+}
+
+.Occupation {
+    color: #000131;
+    font-weight: medium;
+    font-size: 24px;
+}
+
+.description {
+    font-weight: light;
+    font-size: 18px;
+}
+
+#ViewResume {
+    background-color: white;
+    width: 281px;
+    height: 96px;
+    border-radius: 50px;
+    border-style: none;
+    font-size: 32px;
+    font-family: 'Poppins';
+    font-weight: medium;
+    box-shadow: 0px 4px 4px gray;
+}
+
+#ViewResume:hover {
+    background-color: #000131;
+    color: white;
+    cursor: pointer;
+}
+
+.Profil {
+    display: inline-flex;
+    position: relative;
+    width: 50%;
+    align-items: center;
+    justify-content: center;
+    padding-top: 72px;
+}
+
+.foto {
+    display: flex;
+    justify-content: center;
+    align-self: center;
+    transform: scale(0.8);
+}
+
+.skill-list {
+    display: flex;
+    max-width: 100%;
+    flex-direction: row;
+    justify-content: space-around;
+    font-size: 20px;
+}
+
+.skills {
+    text-align: center; 
+}
+
+.C {
+    background-color: #CC3939;
+    color: white;
+}
+
+.Java {
+    background-color: #CFBE22;
+    color: white;
+}
+
+.SQL {
+    background-color: #77BA7A;
+    color: white;
+}
+
+.HTML {
+    background-color: #7FAEBE;
+    color: white;
+}
+
+.CSS {
+    background-color: #8B7FBE;
+    color: white;
+}
+
+.JS {
+    background-color: #b14f12;
+    color: white;
+}
+
+.ClickUp {
+    background-color: #BA77A3;
+    color: white;
+}
+
+.Excel {
+    background-color: #BA7777;
+    color: white;
+}
+
+.Project {
+    width: 100%;
+    max-height: 250vh;
+    background: white;
+}
+
+.Judul {
+    padding-top: 2cm;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    font-family: 'Poppins';
+    font-size: 32px;
+}
+
+.bar {
+    width: 0%;
+    height: 3px;
+    background: #000131;
+    transition: width 0.5s;
+}
+
+.PitchedIn-container:hover .bar{
+    width: 100%;
+}
+
+.PitchedIn-container:hover img {
+    transform: scale(1.05);
+}
+
+.Apple-container:hover .bar{
+    
+    width: 100%;
+    transform: scaleX(-1);
+}
+
+.Apple-container:hover img {
+    transform: scale(1.05);
+}
+
+.Recent {
+    color: #000131;
+}
+
+.Projects {
+    color: #CB8383;
+}
+
+.blank_1 {
+    width: 25.5%;
+    height: 10cm;
+    display: inline-block;
+    position: relative;
+}
+.PitchedIn-container {
+    opacity: 0;
+    transition: opacity 0.2s ease-in-out both;
+    display: inline-block;
+    position: relative;
+    height: 12cm;
+    background: linear-gradient(to bottom, #C3D4E9, #BCE9F3);
+    vertical-align: bottom;
+    border-top-right-radius: 0px;
+    border-bottom-right-radius: 0px;
+    border-top-left-radius: 40px;
+    border-bottom-left-radius: 40px;
+    width: 74%;
+    max-width: 1600px;
+    margin: 0 auto;
+}
+
+
+.PitchedIn-contents {
+    font-family: 'Poppins';
+    font-size: 1vw;
+    color: #1E1E1E;
+    display: inline-block;
+    position: relative;
+    width: 49%;
+    vertical-align: top;
+    padding-top: 30px;
+    padding-left: 5vw;
+}
+
+.PitchedIn-contents p {
+    text-align: justify;
+}
+
+.PitchedIn-image {
+    display: inline-block;
+    position: relative;
+    width: 50%;
+    padding: 1vw;
+}
+
+.snapshot_1 {
+    transform: scale(0.6);
+}
+
+#ViewPitchedIn {
+    background-color: #7FAEBE;
+    width: 15vw;
+    height: 5vw;
+    border-radius: 50px;
+    border-style: none;
+    font-size: 1.5vw;
+    font-family: 'Poppins';
+    font-weight: medium;
+    box-shadow: 0px 4px 4px gray;
+    color: white;
+    margin: 2vw;
+}
+
+#ViewPitchedIn:hover {
+    background-color: #000131;
+    cursor: pointer;
+}
+
+.PitchedIn-container:hover img{
+    transform: scale(0.8);
+}
+
+.Apple-container {
+    opacity: 0;
+    transition: opacity 0.2s ease-in-out both;
+    width: 75%;
+    max-width: 1600px;
+    height: 12cm;
+    background: linear-gradient(to bottom, #C4CCE2, #D7EAFF);
+    border-bottom-right-radius: 40px;
+    border-top-right-radius: 40px;
+    left: -100%;
+}
+
+.PitchedIn-container.show {
+    opacity: 1;
+    animation: slideInRight 1s forwards;
+    animation-fill-mode: forwards;
+    will-change: transform;
+}
+
+.Apple-container.show {
+    opacity: 1;
+    animation: slideInLeft 1s forwards;
+    left: 0;
+    animation-fill-mode: forwards;
+    will-change: transform;
+}
+
+@keyframes slideInRight {
+    from {
+      opacity: 0;
+      transform: translateX(100%);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+  
+  @keyframes slideInLeft {
+    from {
+      opacity: 0;
+      transform: translateX(-100%);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+
+.Apple-image {
+    display: inline-block;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    max-width: 482.4px;
+    max-height: 256.8px;
+    margin: 0;
+    left: 5vh;
+    padding-top: 7vh;
+}
+
+.Apple-image img {
+    display: inline-block;
+    width: 100%;
+    left: 0%; 
+    height: auto;
+    max-height: 600px; /* set the maximum height */
+    position: absolute;
+}
+
+.Apple-desc {
+    font-family: Poppins;
+    font-size: 2vh;
+    color: rgb(30, 30, 30);
+    display: inline-block;
+    position: relative;
+    width: 55%;
+    vertical-align: top;
+    padding-top: 30px;
+    padding-right: 2cm;
+    text-align: justify;
+    left: 9vh;
+}
+
+#ViewApple {
+    background-color: #69779C;
+    width: 15vw;
+    height: 5vw;
+    border-radius: 50px;
+    border-style: none;
+    font-size: 1.5vw;
+    font-family: 'Poppins';
+    font-weight: medium;
+    box-shadow: 0px 4px 4px gray;
+    color: white;
+    margin: 2vw;
+}
+
+#ViewApple:hover {
+    background-color: #000131;
+    cursor: pointer;
+}
+
+.Apple-container:hover img {
+    transform: scale(1.05);
+}
+
+.otherProject p{
+    font-family: 'Poppins';
+    font-size: 32px;
+    text-align: center;
+    font-weight: bold;
+    color:#000131
+}
+
+.otherProject {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.judul2 {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.judul2 h2 {
+    font-family: 'Poppins';
+    font-size: 24px;
+    color: #c06c84;
+}
+
+.judul2 h3 {
+    font-family: 'Poppins';
+    font-size: 24px;
+}
+
+.bar2 {
+width: 50%;
+  height: 3px;
+  background-color:#000131;
+  margin-top: 10px;
+}
+
+.other {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color:white
+}
+
+.bookHotel {
+    width: 33%;
+    height: 60vh;
+    display: flex; /* added */
+    justify-content: center; /* added */
+    align-items: center; /* added */
+}
+
+.HCI {
+    width: 33%;
+    height: 60vh;
+    display: flex; /* added */
+    justify-content: center; /* added */
+    align-items: center; /* added */
+}
+
+.image-container {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center; /* added */
+}
+
+.image-container img {
+    width: 80%; 
+    height: 80%;
+}
+
+.image-container img:hover {
+    transform: scale(1.2);
+    cursor: pointer;
+}
+
+.Noka {
+    width: 33%;
+    height: 60vh;
+    display: flex; /* added */
+    justify-content: center; /* added */
+    align-items: center; /* added */
+}
+
+.Noka img {
+    width: 80%;
+    height: 80%;
+    border-radius: 40px;
+}
+
+.Noka img:hover {
+    transform: scale(1.2);
+    cursor: pointer;
+}
+
+#Expertise {
+    width: 100%;
+    height: auto;
+    background-color: #EBF5F9;
+}
+
+.expertise-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    padding-top: 12.5vh;
+    padding-bottom: 12.5vh;
+}
+
+.box {
+    width: 55vh;
+    height: 75vh;
+    background-color: white;
+    box-shadow:0px 4px 4px gray;
+    border-radius: 40px;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+}
+
+
+.ui {
+    display: flex;
+    justify-content: center;
+    padding-top: 10px;
+}
+
+.box:hover h2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(to right, #f8b195, #f67280, #c06c84);
+    color: white;
+}
+
+
+.box img {
+    width: 150px;
+    height: 150px;
+}
+
+.box p {
+    color: #1E1E1E;
+    opacity: 59%;
+    font-size: 22px;
+    font-family: 'Poppins';
+    text-align: center;
+    padding-top: 30px;
+}
+
+.pm {
+    display: flex;
+    justify-content: center;
+    padding-top: 10px;
+}
+
+.fe {
+    display: flex;
+    justify-content: center;
+    padding-top: 10px;
+}
+
+.contact-container {
+    display: flex;
+    justify-content: space-around;
+    font-size: 22px;
+    font-family: 'Poppins';
+    margin-top: 5vh;
+}
+
+.linkedin {
+    display: flex;
+    justify-content: center;
+}
+
+.email {
+    display: flex;
+    justify-content: center;
+}
+
+.number {
+    display: flex;
+    justify-content: center;
+}
+
+#Contact {
+    width: 100%;
+    height: 10vh;
+}
+
+.contact-container p{
+    padding: 10px;
+}
+
+.expertise-container h2 {
+    color: #1E1E1E;
+    font-family: 'Poppins';
+    font-weight: bold;
+    text-align: center;
+    font-size: 32px;
+}
+
+.rocket {
+    transform: scale(0.7);
+    bottom: 1cm;
+    right: 0;
+    width: 200px;
+    height: 200px;
+    position: fixed;
+    z-index: 10;
+    cursor: pointer;
+}
+
+@media only screen and (max-width: 768px) {
+    .navigation {
+    height: 8vh;
+    position: fixed;
+    }
+    
+    .navigation-isi {
+    padding: 1.5em;
+    font-size: 14px;
+    }
+    
+    .navigation-scrolled {
+    height: 8vh;
+    }
+    
+    .main-interface h1 {
+    font-size: 6vw;
+    }
+    
+    .contents {
+    width: 100%;
+    }
+    
+    .Hi {
+    font-size: 10vw;
+    }
+    
+    .Occupation {
+    font-size: 16px;
+    }
+    
+    .description {
+    font-size: 14px;
+    }
+    
+    .foto {
+    transform: scale(0.4);
+    }
+    
+    .skill-list {
+    flex-direction: row;
+    font-size: 16px;
+    }
+    
+    .skills {
+    margin-top: 16px;
+    margin-bottom: 16px;
+    }
+    
+    .Judul {
+    font-size: 24px;
+    padding-top: 32px;
+    }
+    }
+    
