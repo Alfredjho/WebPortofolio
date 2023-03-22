@@ -244,7 +244,7 @@ body {
 
 .Project {
     width: 100%;
-    max-height: 250vh;
+    max-height: 400vh;
     background: white;
 }
 
@@ -301,7 +301,7 @@ body {
     transition: opacity 0.2s ease-in-out both;
     display: inline-block;
     position: relative;
-    height: 12cm;
+    height: 50vh;
     background: linear-gradient(to bottom, #C3D4E9, #BCE9F3);
     vertical-align: bottom;
     border-top-right-radius: 0px;
@@ -316,7 +316,7 @@ body {
 
 .PitchedIn-contents {
     font-family: 'Poppins';
-    font-size: 1vw;
+    font-size: 2.2vh;
     color: #1E1E1E;
     display: inline-block;
     position: relative;
@@ -337,6 +337,10 @@ body {
     padding: 1vw;
 }
 
+.PitchedIn-image img{
+    max-width: 30vw;
+}
+
 .snapshot_1 {
     transform: scale(0.6);
 }
@@ -352,7 +356,7 @@ body {
     font-weight: medium;
     box-shadow: 0px 4px 4px gray;
     color: white;
-    margin: 2vw;
+    margin: 1vh;
 }
 
 #ViewPitchedIn:hover {
@@ -369,7 +373,7 @@ body {
     transition: opacity 0.2s ease-in-out both;
     width: 75%;
     max-width: 1600px;
-    height: 12cm;
+    height: 50vh;
     background: linear-gradient(to bottom, #C4CCE2, #D7EAFF);
     border-bottom-right-radius: 40px;
     border-top-right-radius: 40px;
@@ -418,8 +422,7 @@ body {
     position: relative;
     width: 100%;
     height: 100%;
-    max-width: 482.4px;
-    max-height: 256.8px;
+    max-width: 25vw;
     margin: 0;
     left: 5vh;
     padding-top: 7vh;
@@ -436,7 +439,7 @@ body {
 
 .Apple-desc {
     font-family: Poppins;
-    font-size: 2vh;
+    font-size: 2.2vh;
     color: rgb(30, 30, 30);
     display: inline-block;
     position: relative;
@@ -459,7 +462,7 @@ body {
     font-weight: medium;
     box-shadow: 0px 4px 4px gray;
     color: white;
-    margin: 2vw;
+    margin: 1vh;
 }
 
 #ViewApple:hover {
@@ -519,17 +522,17 @@ width: 50%;
 .bookHotel {
     width: 33%;
     height: 60vh;
-    display: flex; /* added */
-    justify-content: center; /* added */
-    align-items: center; /* added */
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
 }
 
 .HCI {
     width: 33%;
     height: 60vh;
-    display: flex; /* added */
-    justify-content: center; /* added */
-    align-items: center; /* added */
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
 }
 
 .image-container {
@@ -537,7 +540,7 @@ width: 50%;
     display: flex;
     flex-direction: row;
     justify-content: center;
-    align-items: center; /* added */
+    align-items: center; 
 }
 
 .image-container img {
@@ -553,9 +556,9 @@ width: 50%;
 .Noka {
     width: 33%;
     height: 60vh;
-    display: flex; /* added */
-    justify-content: center; /* added */
-    align-items: center; /* added */
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
 }
 
 .Noka img {
@@ -586,7 +589,7 @@ width: 50%;
 }
 
 .box {
-    width: 55vh;
+    max-width: 30vw;
     height: 75vh;
     background-color: white;
     box-shadow:0px 4px 4px gray;
@@ -643,7 +646,7 @@ width: 50%;
     justify-content: space-around;
     font-size: 22px;
     font-family: 'Poppins';
-    margin-top: 5vh;
+    margin: 2vh;
 }
 
 .linkedin {
@@ -663,7 +666,7 @@ width: 50%;
 
 #Contact {
     width: 100%;
-    height: 10vh;
+    max-height: 10vh;
 }
 
 .contact-container p{
@@ -689,58 +692,404 @@ width: 50%;
     cursor: pointer;
 }
 
-@media only screen and (max-width: 768px) {
-    .navigation {
-    height: 8vh;
-    position: fixed;
-    }
-    
+
+/* style for tablets and smaller */
+@media only screen and (max-width: 1023px) and (min-width: 768px)
+{
     .navigation-isi {
-    padding: 1.5em;
-    font-size: 14px;
+        font-size: 2vw;
     }
-    
-    .navigation-scrolled {
-    height: 8vh;
-    }
-    
-    .main-interface h1 {
-    font-size: 6vw;
-    }
-    
+
     .contents {
-    width: 100%;
+        margin-top: 8vh;
     }
-    
     .Hi {
-    font-size: 10vw;
+        display: flex;
+        flex-direction: row;
+        font-size: 5vw;
     }
-    
+
     .Occupation {
-    font-size: 16px;
+        font-size: 2vw;
     }
-    
+
     .description {
-    font-size: 14px;
+        font-weight: light;
+        font-size: 1.25vw;
+        text-align: justify;
     }
-    
-    .foto {
-    transform: scale(0.4);
-    }
-    
+
     .skill-list {
-    flex-direction: row;
-    font-size: 16px;
+        font-size: 1.8vw;
+    }
+
+    .blank_1 {
+        display: none;
+    }
+
+    .PitchedIn-container {
+        opacity: 0;
+        transition: opacity 0.2s ease-in-out both;
+        display: flex;
+        flex-direction: column-reverse;
+        justify-content: center;
+        align-items: center;
+        height: 50vh;
+        background: linear-gradient(to bottom, #C3D4E9, #BCE9F3);
+        vertical-align: bottom;
+        border-radius: 40px;
+        width: 75%;
+        max-width: 1600px;
+        margin: 0 auto;
+    }
+
+    .PitchedIn-image {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: fit-content;
+        height: auto;
+    }
+
+    .PitchedIn-container:hover img {
+        transform: scale(0.8);
+    }
+
+    .PitchedIn-contents {
+        font-family: 'Poppins';
+        font-size: 1.5vh;
+        color: #1E1E1E;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 90%;         
+        padding: 0;
+        margin: 0;
+        left: 0;
+    }
+
+    .Apple-container {
+        opacity: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        transition: opacity 0.2s ease-in-out both;
+        width: 75%;
+        max-width: 1600px;
+        height: 50vh;
+        background: linear-gradient(to bottom, #C4CCE2, #D7EAFF);
+        border-radius: 40px;
+        margin: 0 auto;
+    }
+
+    .Apple-contents{
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    .Apple-image {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 100%;
+        padding: 0;
+        margin: 0;
+        left: 0;
+        margin-bottom: 1vh;
+    }
+
+    .Apple-container:hover img {
+        transform: scale(1.1);
     }
     
-    .skills {
-    margin-top: 16px;
-    margin-bottom: 16px;
+    .Apple-desc {
+        font-family: 'Poppins';
+        font-size: 1.5vh;
+        color: #1E1E1E;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 90%;         
+        padding: 0;
+        margin: 0;
+        left: 0;
+    }
+
+    .bookHotel, .HCI, .Noka {
+        width: 33%;
+        height: fit-content;
+        display: flex; 
+        justify-content: center; 
+        align-items: center; 
+        margin-bottom: 10vh;
     }
     
-    .Judul {
-    font-size: 24px;
-    padding-top: 32px;
+    .expertise-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        padding-top: 12.5vh;
+        padding-bottom: 12.5vh;
     }
+
+    .box {
+        max-width: 75%;
+        height: 75vh;
+        background-color: white;
+        box-shadow:0px 4px 4px gray;
+        border-radius: 40px;
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 5vh;
+    }
+
+    .contact-container {
+        display: flex;
+        justify-content: space-around;
+        font-size: 2vh;
+        font-family: 'Poppins';
+        height: 100%;
+        padding: 0;
+        margin: 1vh;
+    }
+
+    .contact-container p{
+        display: none;
+    }
+}
+
+/* style for handphone and smaller */
+@media only screen and (max-width: 767px) {
+    .navigation-isi {
+        font-size: 2vw;
+    }
+
+    .container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin: 0;
+        padding: 0;
     }
     
+    .profil {
+        width: 100%;
+        padding: 0;
+        margin: 0;
+    }
+
+    .contents {
+        width: 90%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 0;
+        margin: 0;
+    }
+
+    .Hi {
+        display: flex;
+        flex-direction: row;
+        font-size: 5vw;
+    }
+
+    .Occupation{
+        font-size: 3vw;
+        max-width: 100%;
+        text-align: center;
+    }
+
+    .description {
+        font-weight: light;
+        font-size: 2vw;
+        text-align: justify;
+    }
+
+    .skill-list {
+        display: flex;
+        justify-content: space-between;
+        font-size: 3vw;
+        margin-bottom: 20px;
+    }
+
+    #ViewResume {
+        width: 100%;
+        height: 5vh;
+        font-size: 5vw;
+    }
+
+    .blank_1 {
+        display: none;
+    }
+
+    .PitchedIn-container {
+        opacity: 0;
+        transition: opacity 0.2s ease-in-out both;
+        display: flex;
+        flex-direction: column-reverse;
+        justify-content: center;
+        align-items: center;
+        height: 50vh;
+        background: linear-gradient(to bottom, #C3D4E9, #BCE9F3);
+        vertical-align: bottom;
+        border-radius: 40px;
+        width: 75%;
+        max-width: 1600px;
+        margin: 0 auto;
+    }
+
+    .PitchedIn-image {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: fit-content;
+        height: auto;
+        transform: scale(2);
+        margin-bottom: 3vh;
+    }
+
+    .PitchedIn-container:hover img {
+        transform: scale(1.6);
+    }
+
+    .PitchedIn-contents {
+        font-family: 'Poppins';
+        font-size: 1.5vh;
+        color: #1E1E1E;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 90%;         
+        padding: 0;
+        margin: 0;
+        left: 0;
+    }
+
+    .Apple-container {
+        opacity: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        transition: opacity 0.2s ease-in-out both;
+        width: 75%;
+        max-width: 1600px;
+        height: 50vh;
+        background: linear-gradient(to bottom, #C4CCE2, #D7EAFF);
+        border-radius: 40px;
+        margin: 0 auto;
+    }
+
+    .Apple-contents{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        margin-top: 50px;
+    }
+
+    .Apple-image {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 100%;
+        transform: scale(1.5);
+        padding: 0;
+        margin: 0;
+        left: 0;
+        margin-bottom: 12vh;
+    }
+
+    .Apple-container:hover img {
+        transform: scale(1.15);
+    }
+    
+    .Apple-desc {
+        font-family: 'Poppins';
+        font-size: 1.5vh;
+        color: #1E1E1E;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 90%;         
+        padding: 0;
+        margin: 0;
+        left: 0;
+    }
+
+    .other{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .bookHotel, .HCI, .Noka {
+        width: 100%;
+        height: fit-content;
+        display: flex; 
+        justify-content: center; 
+        align-items: center; 
+        margin-bottom: 10vh;
+    }
+
+    .expertise-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        padding-top: 12.5vh;
+        padding-bottom: 12.5vh;
+    }
+
+    .box {
+        max-width: 75%;
+        height: 75vh;
+        background-color: white;
+        box-shadow:0px 4px 4px gray;
+        border-radius: 40px;
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 5vh;
+    }
+
+    .contact-container {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        font-size: 2vw;
+        font-family: 'Poppins';
+        height: 100%;
+        padding: 0;
+        margin: 0.5vh;
+    }
+
+    .contact-container p{
+        display: none;
+    }
+
+    .linkedin, .email, .number {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 0.1;
+    }
+
+}
