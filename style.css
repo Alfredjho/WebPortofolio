@@ -417,9 +417,13 @@ body {
     }
   }
 
+  .Apple-contents{
+    height: 100%;
+  }
 .Apple-image {
     display: inline-block;
     position: relative;
+    align-items: center;
     width: 100%;
     height: 100%;
     max-width: 25vw;
@@ -429,12 +433,14 @@ body {
 }
 
 .Apple-image img {
+    align-items: center;
     display: inline-block;
     width: 100%;
     left: 0%; 
     height: auto;
     max-height: 600px; /* set the maximum height */
     position: absolute;
+    border-radius: 20px;
 }
 
 .Apple-desc {
